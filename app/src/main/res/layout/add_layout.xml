@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/top">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_shopping_cart_24"
+            android:id="@+id/icon"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add New Category"
+            android:id="@+id/categorytitle"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/categoryimg"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/top"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/select2" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_back"
+        android:layout_below="@id/categoryimg"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:id="@+id/categorytext"
+        android:hint="Provide Category"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_marginTop="12dp"
+        android:padding="5dp"
+        android:layout_below="@id/categorytext"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textSize="20sp"
+            android:textColor="@color/dark"
+            android:layout_marginEnd="50dp"
+            android:id="@+id/cancel"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:textSize="20sp"
+            android:textColor="@color/dark"
+            android:id="@+id/send"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/menu"
+            android:icon="@drawable/ic_restaurant"
+            android:title="Menu"/>
+        <item android:id="@+id/cart"
+            android:icon="@drawable/ic_banner"
+            android:title="Banner"/>
+        <item android:id="@+id/orders"
+            android:icon="@drawable/baseline_access_time_24"
+            android:title="Orders"/>
+    </group>
+</menu>

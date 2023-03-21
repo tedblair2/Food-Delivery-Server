@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back2"
+    tools:context=".OrderDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+            android:id="@+id/card"
+            app:cardBackgroundColor="#DADFF7"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="orderId"
+                    android:textStyle="bold"
+                    android:id="@+id/orderId"
+                    android:layout_margin="5dp"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="04.03.2023"
+                    android:textColor="@color/black"
+                    android:id="@+id/time"
+                    android:layout_margin="5dp"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="phonenumber"
+                    android:textColor="@color/black"
+                    android:id="@+id/phone"
+                    android:layout_margin="5dp"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1000.00"
+                    android:id="@+id/price"
+                    android:textColor="@color/black"
+                    android:layout_margin="5dp"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:textColor="@color/black"
+                    android:id="@+id/address"
+                    android:layout_margin="5dp"
+                    android:textSize="16sp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    app:icon="@drawable/baseline_location_on_24"
+                    android:text="Directions"
+                    android:textAllCaps="false"
+                    android:layout_gravity="end"
+                    android:layout_margin="6dp"
+                    android:id="@+id/directions"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:layout_below="@id/card"
+            android:id="@+id/title"
+            android:layout_margin="8dp"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:textSize="29sp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/title"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/order_layout"
+            android:id="@+id/recycler_details"/>
+    </RelativeLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>
